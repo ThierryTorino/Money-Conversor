@@ -1,13 +1,14 @@
 const button = document.getElementById('convert-button')
 const dolar = 5.2
 const euro = 5.9
+const bitCoin = 145000.0
 
 const select = document.getElementById('currency-select')
 
 const convertValues = () =>{
     const real = document.getElementById('input-real').value
     const textoReal = document.getElementById('real-value-text')
-    const textoCurrency = document.getElementById('currency-value-text')
+    const textoCurrency = document.getElementById('currency-value')
 
     textoReal.innerHTML = new Intl.NumberFormat('pt-BR',
         {style: 'currency', currency: 'brl'}
@@ -24,6 +25,14 @@ const convertValues = () =>{
         {style: 'currency', currency: 'EUR'}
         ).format(real / euro)
     }
+
+    if(select.value === 'Bit Coin'){
+        textoCurrency.innerHTML = new Intl.NumberFormat('de-DE',
+        {style: 'currency', currency: 'BTC',
+            maximumSignificantDigits: 4}
+        
+        ).format(real / bitCoin)
+    }
 }
 
 const changeCurrency = () =>{
@@ -38,6 +47,11 @@ const changeCurrency = () =>{
     if(select.value === '€ Euro'){
         currencyName.innerHTML = "Euro"
         currencyImg.src = 'assets/euro.png'
+    }
+
+    if(select.value === 'Bit Coin'){
+        currencyName.innerHTML = "Bit Coin"
+        currencyImg.src = 'assets/bitcoin.png'
     }
 
     convertValues()
