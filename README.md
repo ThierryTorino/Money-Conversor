@@ -44,7 +44,7 @@ Um projeto prático e dinâmico de conversão de moedas construído com tecnolog
 Como o projeto utiliza tecnologias web nativas, não é necessária a instalação de pacotes complexos ou dependências (Node.js, etc).
 
 1. **Clone o repositório:**
-> git clone https://github.com/seu-usuario/seu-repositorio.git
+> git clone https://github.com/ThierryTorino/seu-repositorio.git
 
 2. **Abra o projeto:**
 Basta navegar até a pasta do projeto e abrir o arquivo `index.html` diretamente em qualquer navegador de sua preferência (Chrome, Firefox, Edge, etc.).
